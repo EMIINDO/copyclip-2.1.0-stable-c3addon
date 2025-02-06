@@ -1,0 +1,100 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for Copyclip Plugin",
+  "text": {
+    "plugins": {
+      "sparsha_copyclip": {
+        "name": "Copyclip",
+        "description": "Manage clipboard data",
+        "help-url": "https://www.construct.net/en/make-games/addons/407/copyclip",
+        "properties": {},
+        "aceCategories": {
+          "copy": "Type 1 - Exec Command Action",
+          "api": "Type 2 - Clipboard API"
+        },
+        "conditions": {
+          "on-copy": {
+            "list-name": "On Copy",
+            "display-text": "On Copy [Type 2]",
+            "description": "On copy sucessful"
+          },
+          "on-get": {
+            "list-name": "On Get",
+            "display-text": "On Get [Type 2]",
+            "description": "On get sucessful"
+          },
+          "on-copy-error": {
+            "list-name": "On Copy Error",
+            "display-text": "On Copy Error [Type 2]",
+            "description": "On copy error"
+          },
+          "on-get-error": {
+            "list-name": "On Get Error",
+            "display-text": "On Get Error [Type 2]",
+            "description": "On get error"
+          },
+          "on-copy-1": {
+            "list-name": "On Copy",
+            "display-text": "On Copy [Type 1]",
+            "description": "On copy sucessful"
+          }
+        },
+        "actions": {
+          "copy": {
+            "list-name": "Copy to Clipboard",
+            "display-text": "[Type 1] Copy to Clipboard ({0})",
+            "description": "Copy text to clipboard",
+            "params": {
+              "text": {
+                "name": "Text",
+                "desc": "Enter the text to copy"
+              }
+            }
+          },
+          "api-copy": {
+            "list-name": "Copy to Clipboard",
+            "display-text": "[Type 2] Copy to Clipboard ({0})",
+            "description": "Copy text to clipboard (Not supported in all export)",
+            "params": {
+              "text": {
+                "name": "Text",
+                "desc": "Enter the text to copy"
+              }
+            }
+          },
+          "api-get": {
+            "list-name": "Get from Clipboard",
+            "display-text": "[Type 2] Get from Clipboard",
+            "description": "Get data from clipboard (Not supported in all export)"
+          },
+          "clear-error": {
+            "list-name": "clear crr",
+            "display-text": "clear err (Deprecated)",
+            "description": "clear err"
+          },
+          "init-copy": {
+            "list-name": "Initialize Button",
+            "display-text": "[Type 1] Initialize Button ({0})",
+            "description": "Initialize button using ID of the Button",
+            "params": {
+              "button-id": {
+                "name": "Button ID",
+                "desc": "Enter the ID of the Button that will be used to init-copy the text (Specify ID in the property of the button)"
+              }
+            }
+          }
+        },
+        "expressions": {
+          "get-data": {
+            "translated-name": "clipboardData",
+            "description": "Get Clipboard Data"
+          },
+          "error": {
+            "translated-name": "error",
+            "description": "Get last occured error"
+          }
+        }
+      }
+    }
+  }
+}

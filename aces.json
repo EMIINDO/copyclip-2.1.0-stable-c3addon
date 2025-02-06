@@ -1,0 +1,98 @@
+{
+  "copy": {
+    "conditions": [
+      {
+        "id": "on-copy-1",
+        "scriptName": "OnCopy1",
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "copy",
+        "scriptName": "Copy",
+        "highlight": false,
+        "params": [
+          {
+            "id": "text",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "init-copy",
+        "scriptName": "InitCopy",
+        "highlight": false,
+        "params": [
+          {
+            "id": "button-id",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "api": {
+    "conditions": [
+      {
+        "id": "on-copy",
+        "scriptName": "OnCopy",
+        "isTrigger": true
+      },
+      {
+        "id": "on-get",
+        "scriptName": "OnGet",
+        "isTrigger": true
+      },
+      {
+        "id": "on-copy-error",
+        "scriptName": "OnCopyError",
+        "isTrigger": true
+      },
+      {
+        "id": "on-get-error",
+        "scriptName": "OnGetError",
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "api-copy",
+        "scriptName": "ApiCopy",
+        "highlight": false,
+        "isAsync": true,
+        "params": [
+          {
+            "id": "text",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "api-get",
+        "scriptName": "ApiGet",
+        "highlight": false,
+        "isAsync": true
+      },
+      {
+        "id": "clear-error",
+        "scriptName": "ClearError",
+        "highlight": false,
+        "isDeprecated": true
+      }
+    ],
+    "expressions": [
+      {
+        "id": "get-data",
+        "expressionName": "clipboardData",
+        "returnType": "string"
+      },
+      {
+        "id": "error",
+        "expressionName": "error",
+        "returnType": "string"
+      }
+    ]
+  }
+}
